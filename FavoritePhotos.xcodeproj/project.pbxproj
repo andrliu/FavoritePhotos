@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49CCD48D1A10A060008C6570 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CCD48C1A10A060008C6570 /* Social.framework */; };
+		49CCD48F1A10A172008C6570 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CCD48E1A10A172008C6570 /* Foundation.framework */; };
+		49CCD4931A10A791008C6570 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CCD4921A10A791008C6570 /* MessageUI.framework */; };
+		49CCD4961A111BE1008C6570 /* Favorites.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CCD4951A111BE1008C6570 /* Favorites.m */; };
+		49CCD49A1A111CDA008C6570 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CCD4991A111CDA008C6570 /* MapViewController.m */; };
 		49F39AEE1A0FF0D50076A35E /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F39AED1A0FF0D50076A35E /* CustomCollectionViewCell.m */; };
 		49F39AF11A1003B10076A35E /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F39AF01A1003B10076A35E /* FavoritesViewController.m */; };
 		49FFF30B1A0F19E8008DC28D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FFF30A1A0F19E8008DC28D /* main.m */; };
@@ -29,6 +34,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49CCD48C1A10A060008C6570 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		49CCD48E1A10A172008C6570 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		49CCD4901A10A31F008C6570 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		49CCD4921A10A791008C6570 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		49CCD4941A111BE1008C6570 /* Favorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorites.h; sourceTree = "<group>"; };
+		49CCD4951A111BE1008C6570 /* Favorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favorites.m; sourceTree = "<group>"; };
+		49CCD4981A111CDA008C6570 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		49CCD4991A111CDA008C6570 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		49F39AEC1A0FF0D50076A35E /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
 		49F39AED1A0FF0D50076A35E /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 		49F39AEF1A1003B10076A35E /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
@@ -53,6 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49CCD4931A10A791008C6570 /* MessageUI.framework in Frameworks */,
+				49CCD48F1A10A172008C6570 /* Foundation.framework in Frameworks */,
+				49CCD48D1A10A060008C6570 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,9 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49CCD4971A111BE5008C6570 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49CCD4941A111BE1008C6570 /* Favorites.h */,
+				49CCD4951A111BE1008C6570 /* Favorites.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		49FFF2FC1A0F19E8008DC28D = {
 			isa = PBXGroup;
 			children = (
+				49CCD4921A10A791008C6570 /* MessageUI.framework */,
+				49CCD4901A10A31F008C6570 /* Twitter.framework */,
+				49CCD48E1A10A172008C6570 /* Foundation.framework */,
+				49CCD48C1A10A060008C6570 /* Social.framework */,
 				49FFF3071A0F19E8008DC28D /* FavoritePhotos */,
 				49FFF3211A0F19E8008DC28D /* FavoritePhotosTests */,
 				49FFF3061A0F19E8008DC28D /* Products */,
@@ -93,7 +122,10 @@
 				49FFF3101A0F19E8008DC28D /* SearchViewController.m */,
 				49F39AEF1A1003B10076A35E /* FavoritesViewController.h */,
 				49F39AF01A1003B10076A35E /* FavoritesViewController.m */,
+				49CCD4981A111CDA008C6570 /* MapViewController.h */,
+				49CCD4991A111CDA008C6570 /* MapViewController.m */,
 				49FFF3121A0F19E8008DC28D /* Main.storyboard */,
+				49CCD4971A111BE5008C6570 /* Model */,
 				49F39AEC1A0FF0D50076A35E /* CustomCollectionViewCell.h */,
 				49F39AED1A0FF0D50076A35E /* CustomCollectionViewCell.m */,
 				49FFF3151A0F19E8008DC28D /* Images.xcassets */,
@@ -178,6 +210,7 @@
 				TargetAttributes = {
 					49FFF3041A0F19E8008DC28D = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = DCD4R4P68C;
 					};
 					49FFF31D1A0F19E8008DC28D = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -230,10 +263,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				49F39AF11A1003B10076A35E /* FavoritesViewController.m in Sources */,
+				49CCD4961A111BE1008C6570 /* Favorites.m in Sources */,
 				49FFF3111A0F19E8008DC28D /* SearchViewController.m in Sources */,
 				49FFF30E1A0F19E8008DC28D /* AppDelegate.m in Sources */,
 				49FFF30B1A0F19E8008DC28D /* main.m in Sources */,
 				49F39AEE1A0FF0D50076A35E /* CustomCollectionViewCell.m in Sources */,
+				49CCD49A1A111CDA008C6570 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FavoritePhotos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -366,6 +402,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FavoritePhotos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

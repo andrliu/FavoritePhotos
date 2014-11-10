@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FavoritesViewController : UIViewController
-@property NSMutableArray *favoritesArray;
 
 @end

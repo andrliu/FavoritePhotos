@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ub3-5u-FqE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ub3-5u-FqE">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -126,10 +126,9 @@
                                 </connections>
                             </collectionView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NNN-yn-E2S">
-                                <rect key="frame" x="10" y="67" width="300" height="30"/>
+                                <rect key="frame" x="11" y="67" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2Hj-Eo-hFx"/>
-                                    <constraint firstAttribute="width" constant="300" id="rQW-K6-PIs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -137,6 +136,17 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="3e4-aI-IY3"/>
                                 </connections>
                             </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dIN-yv-X6f">
+                                <rect key="frame" x="219" y="67" width="90" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="h3w-If-PyK"/>
+                                    <constraint firstAttribute="height" constant="30" id="iRK-HQ-ZFO"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Tag"/>
+                                    <segment title="User"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -144,13 +154,17 @@
                             <constraint firstItem="NNN-yn-E2S" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="3" id="60X-Qf-9FI"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Hz2-Lw-7u1" secondAttribute="bottom" id="7QH-0v-ruJ"/>
                             <constraint firstItem="Hz2-Lw-7u1" firstAttribute="top" secondItem="NNN-yn-E2S" secondAttribute="bottom" constant="3" id="Iuk-P9-rh3"/>
+                            <constraint firstItem="dIN-yv-X6f" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="3" id="PJK-iP-y8Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dIN-yv-X6f" secondAttribute="trailing" constant="-5" id="Rhd-wA-d5C"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hz2-Lw-7u1" secondAttribute="trailing" constant="-16" id="efD-u9-h5x"/>
-                            <constraint firstAttribute="centerX" secondItem="NNN-yn-E2S" secondAttribute="centerX" id="j2u-on-uuZ"/>
+                            <constraint firstItem="NNN-yn-E2S" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-5" id="lgR-K0-7rp"/>
+                            <constraint firstItem="dIN-yv-X6f" firstAttribute="leading" secondItem="NNN-yn-E2S" secondAttribute="trailing" constant="8" id="pdP-Xw-jK1"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="DPx-qk-jSy"/>
                     <connections>
                         <outlet property="collectionView" destination="Hz2-Lw-7u1" id="2vg-jj-m8k"/>
+                        <outlet property="segmentedControl" destination="dIN-yv-X6f" id="7ie-om-rda"/>
                         <outlet property="textfield" destination="NNN-yn-E2S" id="0DR-9O-ooV"/>
                     </connections>
                 </viewController>
@@ -190,13 +204,36 @@
                     <connections>
                         <segue destination="ieA-Gj-ZcO" kind="relationship" relationship="viewControllers" id="tby-WV-kdU"/>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="Je3-EB-dGe"/>
+                        <segue destination="1nL-dC-X1t" kind="relationship" relationship="viewControllers" id="GYg-fe-VRg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTI-nQ-ztT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="765" y="330"/>
         </scene>
+        <!--Map-->
+        <scene sceneID="dQO-2o-hss">
+            <objects>
+                <viewController id="1nL-dC-X1t" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Qm-AK-InQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="WjQ-6e-wJk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sdv-kJ-yoW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="dzY-cB-Wzw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a3m-rF-jMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="765" y="-291"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="map" width="30" height="30"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
